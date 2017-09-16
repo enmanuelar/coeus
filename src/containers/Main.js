@@ -8,7 +8,6 @@ class MainContainer extends Component {
     };
     componentDidMount () {
         getResource('hello').then((response) => {
-                console.log(response)
                 this.setState((prevState, props) => {
                     return {gifs: response}
                 });
