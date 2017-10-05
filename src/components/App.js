@@ -5,7 +5,7 @@ import MainContainer from '../containers/Main';
 const App = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={MainContainer} />
+      <Route exact component={MainContainer} />
     </Switch>
   </BrowserRouter>
 );
