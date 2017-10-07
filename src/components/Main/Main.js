@@ -38,10 +38,29 @@ export default function Main (props) {
               {
                 props.isLoading ?
                   <Loading /> :
-                  <img
-                    src={props.gifs[0].images.original.url}
-                    alt=""
-                  />
+                  <div className="slider">
+                    <div className="col-sm-4">
+                      <img
+                        src={props.gifs[0].images.original.url}
+                        className="img-left gif-img"
+                        alt=""
+                      />
+                    </div>
+                    <div className="col-sm-4">
+                      <img
+                        src={props.gifs[1].images.original.url}
+                        className="gif-img"
+                        alt=""
+                      />
+                    </div>
+                    <div className="col-sm-4">
+                      <img
+                        src={props.gifs[2].images.original.url}
+                        className="img-right gif-img"
+                        alt=""
+                      />
+                    </div>
+                  </div>
               }
             </div>
           </p>

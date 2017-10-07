@@ -3,7 +3,7 @@ const apiUrl = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}`;
 
 const getRandomNumber = () => Math.floor((Math.random() * 100) + 1);
 
-const getData = query => fetch(`${apiUrl}&limit=1&offset=${getRandomNumber()}&rating=G&lang=en&q=${query}`)
+const getData = query => fetch(`${apiUrl}&limit=3&offset=${getRandomNumber()}&rating=G&lang=en&q=${query}`)
   .then(response => response.json()
     .then(({ data, }) => data));
 
