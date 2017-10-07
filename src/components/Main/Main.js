@@ -19,6 +19,8 @@ export default function Main (props) {
           <TextField
             hintText="Find gif"
             inputStyle={inputStyle}
+            value={props.input}
+            onChange={props.onInputChange}
           />
           <FlatButton
             label="Find Gif"
@@ -31,7 +33,10 @@ export default function Main (props) {
         <div className="col-sm-12">
           <p className="App-intro">
             <div className="gif-container">
-              <img src={props.gifs[0].images.original.url} style={{ width: props.gifs[0].images.original.width, height: props.gifs[0].images.original.height }} alt="" />
+              <img
+                src={props.gifs[0].images.original.url}
+                alt=""
+              />
             </div>
           </p>
         </div>
