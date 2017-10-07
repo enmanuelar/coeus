@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 import logo from '../../donald_trump_PNG_00000.png';
+import Loading from '../Loading/Loading';
 import './Main.css';
 
 export default function Main (props) {
@@ -21,6 +22,7 @@ export default function Main (props) {
             inputStyle={inputStyle}
             value={props.input}
             onChange={props.onInputChange}
+            onKeyPress={props.onKeyPress}
           />
           <FlatButton
             label="Find Gif"
@@ -33,10 +35,14 @@ export default function Main (props) {
         <div className="col-sm-12">
           <p className="App-intro">
             <div className="gif-container">
-              <img
-                src={props.gifs[0].images.original.url}
-                alt=""
-              />
+              {
+                props.isLoading ?
+                  <Loading /> :
+                  <img
+                    src={props.gifs[0].images.original.url}
+                    alt=""
+                  />
+              }
             </div>
           </p>
         </div>
@@ -48,4 +54,8 @@ export default function Main (props) {
 Main.propTypes = {
   gifs: PropTypes.arrayOf.isRequired,
   onSubmit: PropTypes.func.isRequired,
+  onKeyPress: PropTypes.func.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  input: PropTypes.string.isRequired,
 };

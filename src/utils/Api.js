@@ -5,6 +5,6 @@ const getRandomNumber = () => Math.floor((Math.random() * 100) + 1);
 
 const getData = query => fetch(`${apiUrl}&limit=1&offset=${getRandomNumber()}&rating=G&lang=en&q=${query}`)
   .then(response => response.json()
-    .then(({ data }) => data));
+    .then(({ data, }) => data));
 
 export default getData;
