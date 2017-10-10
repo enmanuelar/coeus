@@ -20,25 +20,6 @@
   font-size: large;
 }
 
-.gif-container {
-  margin-top: 100px;
-  max-height: 400px;
-}
-
-.gif-img {
-  height: 250px;
-  width: 100%;
-}
-
-.img-left {
-  -webkit-mask-image:-webkit-gradient(linear, right 1, 0 0, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-  margin-right: 10px;
-}
-
-.img-right {
-  -webkit-mask-image:-webkit-gradient(linear, right 1, 0 0, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
-}
-
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

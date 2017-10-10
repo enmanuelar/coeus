@@ -4,6 +4,7 @@ import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 import logo from '../../donald_trump_PNG_00000.png';
 import Loading from '../Loading/Loading';
+import Carousel from '../Carousel/Carousel';
 import './Main.css';
 
 export default function Main (props) {
@@ -38,29 +39,9 @@ export default function Main (props) {
               {
                 props.isLoading ?
                   <Loading /> :
-                  <div className="slider">
-                    <div className="col-sm-4">
-                      <img
-                        src={props.gifs[0].images.original.url}
-                        className="img-left gif-img"
-                        alt=""
-                      />
-                    </div>
-                    <div className="col-sm-4">
-                      <img
-                        src={props.gifs[1].images.original.url}
-                        className="gif-img"
-                        alt=""
-                      />
-                    </div>
-                    <div className="col-sm-4">
-                      <img
-                        src={props.gifs[2].images.original.url}
-                        className="img-right gif-img"
-                        alt=""
-                      />
-                    </div>
-                  </div>
+                  <Carousel
+                    gifs={props.gifs}
+                  />
               }
             </div>
           </p>
