@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Main from '../components/Main/Main';
 import getData from '../utils/Api';
+import { homeActions } from '../actions';
 
 class MainContainer extends Component {
   state = {
