@@ -11,9 +11,7 @@ const initialState = {
   isLoadingData: false
 };
 
-const home = (action, currentState = initialState) => {
-  debugger;
-if (action) {
+const home = (currentState = initialState, action) => {
   switch (action.type){
     case FETCH_HOME_GIF_STARTED:
       return {
@@ -38,8 +36,6 @@ if (action) {
     default:
       return currentState;
   }
-}
-
 };
 
 export default home;

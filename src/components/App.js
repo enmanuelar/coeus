@@ -1,17 +1,21 @@
 import React from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-//import reducers from '../reducers';
+import reducers from '../reducers/index';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import MainContainer from '../containers/Main';
+import HomeContainer from '../containers/Home';
+import Main from '../components/Main/Main';
 
+const store = createStore(reducers);
 
 const App = () => (
-    <BrowserRouter>
+  <Provider store={store}>
+    <Main>
       <Switch>
-        <Route exact component={MainContainer} />
+        <Route exact component={HomeContainer} />
       </Switch>
-    </BrowserRouter>
+    </Main>
+  </Provider>
 );
 
 export default App;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Main from '../components/Main/Main';
+import Home from '../components/Home/Home';
 import getData from '../utils/Api';
 
 import { connect } from 'react-redux';
@@ -41,7 +41,7 @@ import { homeActions } from '../actions';
 //  render () {
 //    return (
 //      <MuiThemeProvider>
-//        <Main
+//        <Home
 //          input={this.state.input}
 //          gifs={this.state.gifs}
 //          isLoading={this.state.isLoading}
@@ -54,13 +54,9 @@ import { homeActions } from '../actions';
 //  }
 //}
 
-const mapStateToProps = (state) => {
-  debugger;
-  console.log(state)
-  return state.home
-};
+const mapStateToProps = ({home}) => home;
 const mapDispatchToProps =  dispatch => ({
   onInputChange: e => homeActions.onInputChange(dispatch, e.target.value)
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
