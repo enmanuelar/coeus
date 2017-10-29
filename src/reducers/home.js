@@ -2,11 +2,11 @@ import {
   FETCH_HOME_GIF_STARTED,
   FETCH_HOME_GIF_COMPLETED,
   FETCH_HOME_GIF_FAILED,
-  SEARCH_INPUT_CHANGED
+  SEARCH_INPUT_CHANGED,
 } from '../actions/home';
 
 const initialState = {
-  queryString: '',
+  searchInput: 'hello',
   data: [],
   isLoadingData: false
 };
@@ -31,7 +31,7 @@ const home = (currentState = initialState, action) => {
     case SEARCH_INPUT_CHANGED:
       return {
         ...currentState,
-        queryString: action.payload
+        searchInput: action.payload
       };
     default:
       return currentState;

@@ -1,12 +1,15 @@
 import React from 'react';
-import { createStore } from 'redux';
+import { createStore, compose } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from '../reducers/index';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomeContainer from '../containers/Home';
 import Main from '../components/Main/Main';
 
-const store = createStore(reducers);
+const store = createStore(
+  reducers,
+  compose(window.devToolsExtension ? window.devToolsExtension() : f => f)
+);
 
 const App = () => (
   <Provider store={store}>
