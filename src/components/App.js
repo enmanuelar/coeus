@@ -1,8 +1,8 @@
 import React from 'react';
 import { createStore, compose } from 'redux';
 import { Provider } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
 import reducers from '../reducers/index';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomeContainer from '../containers/Home';
 import Main from '../components/Main/Main';
 

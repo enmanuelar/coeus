@@ -4,7 +4,7 @@ import { MuiThemeProvider } from 'material-ui';
 import { BrowserRouter } from 'react-router-dom';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-const Main = ({ children }) => {
+const Main = ({ children, }) => {
   const muiTheme = getMuiTheme({
     palette: {
       primary1Color: '#fb6262',
@@ -12,8 +12,8 @@ const Main = ({ children }) => {
       primaryTextColor: '#00B2A7A70',
       secondaryTextColor: '#B2A7A7',
       accent1Color: '#555',
-      textColor: '#B2A7A7'
-    }
+      textColor: '#B2A7A7',
+    },
   });
   return (
     <div className="App container">
@@ -27,11 +27,11 @@ const Main = ({ children }) => {
         </BrowserRouter>
       </div>
     </div>
-  )
+  );
 };
 
 Main.propTypes = {
-  children: PropTypes.shape().isRequired
+  children: PropTypes.shape().isRequired,
 };
 
 export default Main;

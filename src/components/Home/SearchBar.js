@@ -8,17 +8,17 @@ class SearchBar extends Component {
   static propTypes = {
     onInputChange: PropTypes.func.isRequired,
     onKeyPress: PropTypes.func.isRequired,
-    searchInput: PropTypes.string
+    searchInput: PropTypes.string,
   };
 
-  render() {
+  render () {
     return (
       <div>
         <TextField
-          inputStyle={{color: 'rgba(241, 217, 217, 0.87)'}}
+          inputStyle={{ color: 'rgba(241, 217, 217, 0.87)', }}
           value={this.props.searchInput}
           onChange={this.props.onInputChange}
-          onKeyPress={(e) => this.props.onKeyPress(e, this.props.searchInput)}
+          onKeyPress={e => this.props.onKeyPress(e, this.props.searchInput)}
         />
         <FlatButton
           label="Find Gif"
@@ -26,7 +26,7 @@ class SearchBar extends Component {
           onClick={() => this.props.fetchData(this.props.searchInput)}
         />
       </div>
-    )
+    );
   }
 }
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Carousel.css';
 
-export default function CarouselItem ({ gif, side }) {
+export default function CarouselItem ({ gif, side, }) {
   const setSideClass = (side) => {
-    switch (side){
+    switch (side) {
       case 0:
         return 'img-left gif-img';
       case 2:

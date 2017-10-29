@@ -11,14 +11,14 @@ class Home extends Component {
     onInputChange: PropTypes.func.isRequired,
     onKeyPress: PropTypes.func.isRequired,
     fetchData: PropTypes.func.isRequired,
-    searchInput: PropTypes.string
+    searchInput: PropTypes.string,
   };
 
-  componentDidMount() {
+  componentDidMount () {
     this.props.fetchData(this.props.searchInput);
   }
 
-  render() {
+  render () {
     return (
       <div className="App container">
         <div className="row">
@@ -46,7 +46,7 @@ class Home extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
